@@ -4,6 +4,7 @@ body{
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
+    transition: all ease 0.9s;
 }
 header{
     display: flex;
@@ -48,6 +49,7 @@ main{
     height: 45vh;
     width: 45%;
     overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.377);
     gap:20px;
     padding: 10px;
     transition: all  ease .9s;
@@ -65,8 +67,8 @@ main{
     height: 10px;
 }
 .card{
-    min-width: 30%;
-    min-height: 90%;
+    min-width: 172.88px;
+    min-height: 251.31px;
     border-radius: 10px;
     /* background: url(../imagens/cards/cardBrook.jpg); */
     background-size: 100% 100%;
@@ -84,4 +86,157 @@ main{
 section{
     display: flex;
     box-shadow: 0px 0px 5px black;
+}
+.Luffy{
+    background: url(../imagens/cards/cardLuffy.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Zoro{
+    background: url(../imagens/cards/cardZoro.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Nami{
+    background: url(../imagens/cards/cardNami.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Usopp{
+    background: url(../imagens/cards/cardUsopp.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Sanji{
+    background: url(../imagens/cards/cardSanji.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Chopper{
+    background: url(../imagens/cards/cardChopper.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Robin{
+    background: url(../imagens/cards/cardRobin.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Franky{
+    background: url(../imagens/cards/cardFranky.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Brook{
+    background: url(../imagens/cards/cardBrook.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Jinbei{
+    background: url(../imagens/cards/cardJinbei.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card-move-left {
+    animation: moveLeft 0.7s ease-in-out forwards;
+  }
+  
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
+  .LuffyFundo{
+    background: url(../imagens/Luffy.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ZoroFundo{
+    background: url(../imagens/Zoro.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.NamiFundo{
+    background: url(../imagens/Nami.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.UsoppFundo{
+    background: url(../imagens/Usopp.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.SanjiFundo{
+    background: url(../imagens/Sanji.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ChopperFundo{
+    background: url(../imagens/Chopper.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.RobinFundo{
+    background: url(../imagens/Robin.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.FrankyFundo{
+    background: url(../imagens/Franky.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.BrookFundo{
+    background: url(../imagens/Brook.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.JinbeiFundo{
+    background: url(../imagens/Jinbei.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.personagens{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+
+}
+.sobre{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
 }

@@ -1,57 +1,77 @@
 const telaDeFundo = document.querySelector("body");
 const recipienteDasCartas = document.querySelector(".cards");
-const botãoParaFechar= document.querySelector(".fechar")
+const botãoParaFechar = document.querySelector(".fechar");
 const cartas = document.querySelectorAll('.card');
 
+const mugiwaras = [
+    "Luffy",
+    "Zoro",
+    "Nami",
+    "Usopp",
+    "Sanji",
+    "Chopper",
+    "Robin",
+    "Franky",
+    "Brook",
+    "Jinbei"
+];
+
+cartas.forEach((carta, index) => {
+    carta.classList.add(mugiwaras[index])
+});
 
 
+const definirPlanoDeFundo = (nomePersonagem) => {
 
-
-
-class personagem {
-    constructor(nome,imagemCard,imagemFundo){
-        this.nome = nome;
-        this.imagemCard = imagemCard;
-        this.imagemFundo = imagemFundo;
-        
-    }
-    
+    document.body.className = "";
+    telaDeFundo.classList.add(nomePersonagem + "Fundo")
 };
 
-const Luffy = new personagem("Luffy","cardLuffy.jpg","Luffy.png");
-const Zoro = new personagem("Zoro","cardZoro.jpg","Zoro.png");
-const Nami = new personagem("Nami","cardNami.jpg","Nami.jpg");
-const Usopp = new personagem("Usopp","cardUsopp.jpg","Usopp.png");
-const Sanji = new personagem("Sanji","cardSanji.jpg","Sanji.jpg");
-const Chopper = new personagem("Chopper","cardChopper.jpg","Chopper.jpg");
-const Robin = new personagem("Robin","cardRobin.jpg","Robin.jpg");
-const Franky = new personagem("Franky","cardFranky.jpg","Franky.png");
-const Brook = new personagem("Brook","cardBrook.jpg","Brook.png");
-const Jinbei = new personagem("Jinbei","cardJinbei.jpg","Jinbei.jpg");
 
-const mugiwaras = [Luffy,Zoro,Nami,Usopp,Sanji,Chopper,Robin,Franky,Brook,Jinbei];
+const reorganizarCartas = (index) => {
+    const cartaClicada = mugiwaras.splice(index, 1)[0];
+    mugiwaras.push(cartaClicada); 
+    const nomePersonagem = mugiwaras[mugiwaras.length - 1]; 
+    definirPlanoDeFundo(nomePersonagem); 
 
-const desenharPersonagens = (mugiwara, local) =>{
-    local.style.backgroundImage = `url(../imagens/cards/cardBrook.jpg)`;
+    //EntradaPraModificar As cores do site
+};
+
+
+const atualizarCartas = () => {
+    cartas.forEach((carta, index) => {
+        carta.classList.remove('card-move-left');
+        carta.className = 'card'; 
+        carta.classList.add(mugiwaras[index]); 
+    });
+};
+
+
+cartas.forEach((carta, index) => {
+    carta.addEventListener('click', () => {
+        carta.classList.add('card-move-left'); 
+        setTimeout(() => {
+            reorganizarCartas(index); 
+            atualizarCartas(); 
+        }, 500); 
+    });
+});
+
+let menu = "aberto"
+const trocarImagem = document.querySelector(".trocaImagem")
+const fechar = () =>{
+    
+    if (menu === "aberto"){
+        recipienteDasCartas.style.width = "15%"
+        menu = "fechado"
+        trocarImagem.src = "./imagens/abrir.png"
+    }else{
+        recipienteDasCartas.style.width = "45%"
+        menu = "aberto"
+        trocarImagem.src = "./imagens/fechar.png"
+    }
     
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-cartas.forEach(carta =>{
-    mugiwaras.forEach(chapeuDePalha =>{
-        
-        desenharPersonagens(chapeuDePalha, carta)
-    })
-})
+botãoParaFechar.addEventListener("click", fechar)
