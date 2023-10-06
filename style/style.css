@@ -1,70 +1,72 @@
-body{
-    height: 100vh;
-    background: url(../imagens/principal.jpeg);
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: all ease 0.9s;
-}
-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 12vh;
-    box-shadow: 0px 0px 10px black;
-}
-header figure img{
-    width: 10vw;
-}
-header nav{
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header ul{
-    display: flex;
-    justify-content: space-between;
-    width: 40%;
-    
-}
-header a{
-    color: black;
-}
+
 main{
     display: flex;
     height: 88vh;
     justify-content: space-between;
     align-items: center;
 }
+section{
+    background-color: transparent;
+}
 .info{
     height: 50vh;
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px black;
+    transition: all ease 1s;
+    position: relative;
+}
+.informaçãoTexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95%;
+}
+.informaçãoTexto h1{
+    align-self: center;
+    color: rgb(0, 47, 255);
+    text-shadow: 1px 1px black;
+    
+}
+.informaçãoTexto span{
+    color: rgb(245, 24, 24);
+}
+.informaçãoTexto p {
+    color: rgb(0, 47, 255);
+    text-shadow: 1px 1px black;
+    padding-left: 8px ;
+}
+.informaçãoTexto button{
+    margin-bottom: 10px;
+    min-width: 26.5px;
+    align-self: center;
 }
 .cards{
     display: flex;
     align-items: center;
     position: relative;
     height: 45vh;
-    width: 45%;
+    width: 3%;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.377);
+    background-color: rgba(10, 50, 226, 0.096);
     gap:20px;
     padding: 10px;
     transition: all  ease .9s;
     cursor: pointer;
+    box-shadow: 0px 0px 5px black;
 }
 .fechar{
     align-self: self-start;
     cursor: pointer;
-    position: absolute;
+    width: 30px;
     top: 0;
     left: 0;
 }
 .fechar img{
     margin-left:2px;
-    height: 10px;
+    height: 15px;
 }
 .card{
     min-width: 172.88px;
@@ -83,10 +85,7 @@ main{
     
 }
 
-section{
-    display: flex;
-    box-shadow: 0px 0px 5px black;
-}
+
 .Luffy{
     background: url(../imagens/cards/cardLuffy.jpg);
     background-size: 100% 100%;
@@ -239,4 +238,87 @@ section{
     top: 0;
     width: 100%;
     height: 100vh;
+}
+.personagens{
+    background-color: rgba(0, 255, 255, 0.37);
+    
+}
+.abrirInformação{
+   display: flex;
+   justify-content: end;
+}
+.abrirInformação button{
+    width: 27px;
+    color: black;
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.397);
+    border: solid 1px rgba(0, 0, 0, 0.336);
+}
+.personagens{
+    color: rgba(0, 128, 0, 0.308);
+}
+.perguntaVideo{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.76);
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border: solid 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.perguntaVideo div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.perguntaVideo div{
+    color: red;
+}
+.perguntaVideo .fecharVideo{
+    background-color: red;
+    cursor: pointer;
+    border-radius: 50%;
+    border: solid 1px black;
+    align-self: flex-end;
+    padding: 1px;
+    
+}
+.tabuleiroDoVideo{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tabuleiroDoVideo .botões{
+    width: 50%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.botões button{
+    transition: all ease 1s;
+    width: 50px;
+    padding: 1px;
+    border: solid 1px black;
+    height: 25px;
+    cursor: pointer;
+}
+.botões button:nth-child(1){
+    background-color: rgb(0, 128, 0);
+}
+.botões button:nth-child(2){
+    background-color: red;
+}
+.botões button:nth-child(1):hover{
+    scale: 1.1;
+    filter: drop-shadow(0 0 5px rgba(0, 128, 0, 0.63));
+}
+.botões button:nth-child(2):hover{
+    scale: 1.1;
+    filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.637));
 }

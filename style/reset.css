@@ -7,3 +7,18 @@
     list-style: none;
     text-decoration: none;
 }
+body{
+    height: 100vh;
+    background: url(../imagens/principal.jpeg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all ease 0.9s;
+}
+header li{
+    transition: all ease 1s;
+
+}
+li:hover{
+    scale:  1.2;
+}
